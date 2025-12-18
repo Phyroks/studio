@@ -8,6 +8,9 @@ export function createGitLabProvider(options: GitOptions): GitProviderAPI {
   const { owner, repo, token, branch, rootDir, authorName, authorEmail, instanceUrl = 'https://gitlab.com' } = options
   const gitFiles: Record<string, GitFile> = {}
 
+  // Remove trailing slash from instanceUrl if present
+  const normalizedInstanceUrl = instanceUrl.replace(/\/+$/, '')
+
   // GitLab uses project path (namespace/project) encoded as project ID
   const projectPath = encodeURIComponent(`${owner}/${repo}`)
   const baseURL = `${instanceUrl}/api/v4`
@@ -135,26 +138,26 @@ export function createGitLabProvider(options: GitOptions): GitProviderAPI {
     return {
       success: true,
       commitSha: commitData.id,
-      url: `${instanceUrl}/${owner}/${repo}/-/commit/${commitData.id}`,
+      url: `${normalizedInstanceUrl}/${owner}/${repo}/-/commit/${commitData.id}`,
     }
   }
 
   function getRepositoryUrl() {
-    return `${instanceUrl}/${owner}/${repo}`
+    return `${normalizedInstanceUrl}/${owner}/${repo}`
   }
 
   function getBranchUrl() {
-    return `${instanceUrl}/${owner}/${repo}/-/tree/${branch}`
+    return `${normalizedInstanceUrl}/${owner}/${repo}/-/tree/${branch}`
   }
 
   function getCommitUrl(sha: string) {
-    return `${instanceUrl}/${owner}/${repo}/-/commit/${sha}`
+    return `${normalizedInstanceUrl}/${owner}/${repo}/-/commit/${sha}`
   }
 
   function getFileUrl(feature: StudioFeature, fsPath: string) {
     const featureDir = feature === StudioFeature.Content ? 'content' : 'public'
     const fullPath = joinURL(rootDir, featureDir, fsPath)
-    return `${instanceUrl}/${owner}/${repo}/-/blob/${branch}/${fullPath}`
+    return `${normalizedInstanceUrl}/${owner}/${repo}/-/blob/${branch}/${fullPath}`
   }
 
   function getRepositoryInfo() {
