@@ -13,7 +13,7 @@ export function createGitLabProvider(options: GitOptions): GitProviderAPI {
 
   // GitLab uses project path (namespace/project) encoded as project ID
   const projectPath = encodeURIComponent(`${owner}/${repo}`)
-  const baseURL = `${instanceUrl}/api/v4`
+  const baseURL = `${normalizedInstanceUrl}/api/v4`
 
   // GitLab has prefixed tokens for PAT and OAuth tokens:
   // - PRIVATE-TOKEN header is used for PAT
