@@ -1,5 +1,5 @@
 import { ofetch } from 'ofetch'
-import { joinURL } from 'ufo'
+import { joinURL, withoutTrailingSlash } from 'ufo'
 import type { GitOptions, GitProviderAPI, GitFile, RawFile, CommitResult, CommitFilesOptions } from '../../types'
 import { DraftStatus } from '../../types/draft'
 import { StudioFeature } from '../../types'
@@ -9,7 +9,7 @@ export function createGitLabProvider(options: GitOptions): GitProviderAPI {
   const gitFiles: Record<string, GitFile> = {}
 
   // Remove trailing slash from instanceUrl if present
-  const normalizedInstanceUrl = instanceUrl.replace(/\/+$/, '')
+  const normalizedInstanceUrl = withoutTrailingSlash(instanceUrl)
 
   // GitLab uses project path (namespace/project) encoded as project ID
   const projectPath = encodeURIComponent(`${owner}/${repo}`)
