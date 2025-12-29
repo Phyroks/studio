@@ -26,7 +26,10 @@ import { Slot } from '../../utils/tiptap/extensions/slot'
 import { Frontmatter } from '../../utils/tiptap/extensions/frontmatter'
 import { CodeBlock } from '../../utils/tiptap/extensions/code-block'
 import { InlineElement } from '../../utils/tiptap/extensions/inline-element'
+import { SpanStyle } from '../../utils/tiptap/extensions/span-style'
 import { compressTree } from '@nuxt/content/runtime'
+import TiptapSpanStylePopover from '../tiptap/TiptapSpanStylePopover.vue'
+import { Binding } from '../../utils/tiptap/extensions/binding'
 
 const props = defineProps({
   draftItem: {
@@ -197,9 +200,11 @@ const emojiItems: EditorEmojiMenuItem[] = gitHubEmojis.filter(
         Video,
         Element,
         InlineElement,
+        SpanStyle,
         Slot,
         CodeBlock,
         Emoji,
+        Binding,
       ]"
       :placeholder="$t('studio.tiptap.editor.placeholder')"
     >
@@ -210,6 +215,9 @@ const emojiItems: EditorEmojiMenuItem[] = gitHubEmojis.filter(
       >
         <template #link>
           <TiptapLinkPopover :editor="editor" />
+        </template>
+        <template #span-style>
+          <TiptapSpanStylePopover :editor="editor" />
         </template>
       </UEditorToolbar>
 

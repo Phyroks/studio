@@ -250,7 +250,7 @@
         "delete": "Видалити",
         "editContentLabel": "Редагувати вміст {name}",
         "enterContentPlaceholder": "Введіть вміст...",
-        "propsEditorComingSoon": "Редактор властивостей незабаром"
+        "apply": "Застосувати"
       },
       "codeBlock": {
         "filenamePlaceholder": "filename.js"
@@ -260,6 +260,17 @@
         "applyLink": "Застосувати посилання",
         "openInNewWindow": "Відкрити в новому вікні",
         "removeLink": "Видалити посилання"
+      },
+      "spanStyle": {
+        "label": "Стиль span",
+        "stylePlaceholder": "Стилі: напр. color: tomato; font-weight: 600;",
+        "classPlaceholder": "Класи: розділені пробілами",
+        "apply": "Застосувати",
+        "remove": "Видалити"
+      },
+      "binding": {
+        "variablePlaceholder": "Назва змінної",
+        "defaultValuePlaceholder": "Значення за замовчуванням"
       }
     },
     "mediaPicker": {
@@ -289,6 +300,31 @@
       },
       "section": {
         "propertyCount": "1 властивість | {count} властивостей"
+      },
+      "media": {
+        "placeholder": "Відносний шлях або публічна URL...",
+        "searchPlaceholder": "Пошук зображень...",
+        "noImagesFound": "Зображень не знайдено",
+        "noImagesAvailable": "Немає доступних зображень",
+        "imageCount": "{count} з {total} зображення | {count} з {total} зображень"
+      },
+      "icon": {
+        "placeholder": "i-lucide-icon",
+        "searchPlaceholder": "Пошук іконок...",
+        "noIconsFound": "Іконок не знайдено",
+        "searchHint": "Введіть щонайменше 2 символи для пошуку",
+        "libraries": "Бібліотеки:",
+        "allLibraries": "Усі"
+      },
+      "text": {
+        "placeholder": "Введіть текст...",
+        "selectPlaceholder": "Оберіть опцію..."
+      },
+      "date": {
+        "selectDate": "Оберіть дату"
+      },
+      "number": {
+        "placeholder": "0"
       }
     }
   }

@@ -251,7 +251,7 @@
         "delete": "Slett",
         "editContentLabel": "Rediger innhold for {name}",
         "enterContentPlaceholder": "Skriv inn innhold …",
-        "propsEditorComingSoon": "Egenskapseditor kommer snart"
+        "apply": "Bruk"
       },
       "codeBlock": {
         "filenamePlaceholder": "filnavn.js"
@@ -261,6 +261,17 @@
         "applyLink": "Bruk lenke",
         "openInNewWindow": "Åpne i nytt vindu",
         "removeLink": "Fjern lenke"
+      },
+      "spanStyle": {
+        "label": "Span-stil",
+        "stylePlaceholder": "Stiler: f.eks. color: tomato; font-weight: 600;",
+        "classPlaceholder": "Klasser: atskilt med mellomrom",
+        "apply": "Bruk",
+        "remove": "Fjern"
+      },
+      "binding": {
+        "variablePlaceholder": "Variabelnavn",
+        "defaultValuePlaceholder": "Standardverdi"
       }
     },
     "mediaPicker": {
@@ -290,6 +301,31 @@
       },
       "section": {
         "propertyCount": "1 egenskap | {count} egenskaper"
+      },
+      "media": {
+        "placeholder": "Relativ sti eller offentlig URL...",
+        "searchPlaceholder": "Søk etter bilder...",
+        "noImagesFound": "Ingen bilder funnet",
+        "noImagesAvailable": "Ingen bilder tilgjengelig",
+        "imageCount": "{count} av {total} bilde | {count} av {total} bilder"
+      },
+      "icon": {
+        "placeholder": "i-lucide-icon",
+        "searchPlaceholder": "Søk etter ikoner...",
+        "noIconsFound": "Ingen ikoner funnet",
+        "searchHint": "Skriv minst 2 tegn for å søke",
+        "libraries": "Biblioteker:",
+        "allLibraries": "Alle"
+      },
+      "text": {
+        "placeholder": "Skriv inn tekst...",
+        "selectPlaceholder": "Velg et alternativ..."
+      },
+      "date": {
+        "selectDate": "Velg dato"
+      },
+      "number": {
+        "placeholder": "0"
       }
     }
   }

@@ -1,5 +1,44 @@
 # Changelog
 
+## [1.0.0-beta.3](https://github.com/nuxt-content/studio/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2025-12-24)
+
+### Features
+
+* **editor:** handle custom inputs based on types ([#214](https://github.com/nuxt-content/studio/issues/214)) ([a411216](https://github.com/nuxt-content/studio/commit/a411216aba1f462ff42d214fd1860a4c4f1d020b))
+
+### Bug Fixes
+
+* **file:** json/yaml content on create ([#213](https://github.com/nuxt-content/studio/issues/213)) ([230e31e](https://github.com/nuxt-content/studio/commit/230e31ee2373cb17ab1e46532bfa3b969aa8a581))
+
+## [1.0.0-beta.2](https://github.com/nuxt-content/studio/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2025-12-23)
+
+### Features
+
+* **editor:** binding extension ([#201](https://github.com/nuxt-content/studio/issues/201)) ([29632e1](https://github.com/nuxt-content/studio/commit/29632e1cb2d4021d6aa10f01260a25d86d7134ea))
+* **editor:** handle props edition for components ([#195](https://github.com/nuxt-content/studio/issues/195)) ([8819fe9](https://github.com/nuxt-content/studio/commit/8819fe9c81e4291e973be6a2f983dcc3b48f9d1f))
+* **editor:** handle span-style feature with toolbar button ([#193](https://github.com/nuxt-content/studio/issues/193)) ([5498cf7](https://github.com/nuxt-content/studio/commit/5498cf76a0ea8242fbfb2f7762ef620ddc94ef6e))
+* **gitlab:** normalize instance URL by removing trailing slashes ([#190](https://github.com/nuxt-content/studio/issues/190)) ([ae29291](https://github.com/nuxt-content/studio/commit/ae2929174b07905dc20855c513f0f7c12d2c3ca4))
+* **i18n:** add Chinese Traditional (zh-tw) locale ([#199](https://github.com/nuxt-content/studio/issues/199)) ([bbe9b9a](https://github.com/nuxt-content/studio/commit/bbe9b9a6330540377c08de919e188c97aaa78e4c))
+
+### Bug Fixes
+
+* **auth:** remove build error message with git token for custom auth ([#200](https://github.com/nuxt-content/studio/issues/200)) ([fed5a5d](https://github.com/nuxt-content/studio/commit/fed5a5dbf4a7e5722803903c417987062ed89de8))
+* **git:** use PAT owner as main authors + add co-authors ([#203](https://github.com/nuxt-content/studio/issues/203)) ([ff78007](https://github.com/nuxt-content/studio/commit/ff780079b863e7ad3a3f8897d139b5c1102ffae3))
+* **i18n:** typo in polish translation ([#204](https://github.com/nuxt-content/studio/issues/204)) ([bd89373](https://github.com/nuxt-content/studio/commit/bd893739d574b74198b8ecda16731d0b3e586705))
+* **types:** useless ts error comment ([3371f8b](https://github.com/nuxt-content/studio/commit/3371f8be03430e0acd239720c15d64270797d3ce))
+
+## [1.0.0-beta.1](///compare/v1.0.0-beta.0...v1.0.0-beta.1) (2025-12-18)
+
+### Features
+
+* **auth:** provide utility for custom authentication ([#181](undefined/undefined/undefined/issues/181)) 3e1b64f
+* **i18n:** add Norwegian (nb-no) locale ([#187](undefined/undefined/undefined/issues/187)) f8fcb7b
+* **i18n:** add Norwegian Nynorsk (nn-no) translation ([#188](undefined/undefined/undefined/issues/188)) c59a26c
+
+### Bug Fixes
+
+* **sidebar:** apply left margin style to fixed elements ([#189](undefined/undefined/undefined/issues/189)) 6e97ce8
+
 ## [1.0.0-beta.0](///compare/v1.0.0-alpha.4...v1.0.0-beta.0) (2025-12-16)
 
 ### Features

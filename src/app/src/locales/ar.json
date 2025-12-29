@@ -250,7 +250,7 @@
         "delete": "حذف",
         "editContentLabel": "تعديل محتوى {name}",
         "enterContentPlaceholder": "أدخل المحتوى...",
-        "propsEditorComingSoon": "محرر الخصائص قادم قريباً"
+        "apply": "تطبيق"
       },
       "codeBlock": {
         "filenamePlaceholder": "filename.js"
@@ -260,6 +260,17 @@
         "applyLink": "تطبيق الرابط",
         "openInNewWindow": "فتح في نافذة جديدة",
         "removeLink": "إزالة الرابط"
+      },
+      "spanStyle": {
+        "label": "نمط السبان",
+        "stylePlaceholder": "الأنماط: مثال color: tomato; font-weight: 600;",
+        "classPlaceholder": "الفئات: مفصولة بمسافات",
+        "apply": "تطبيق",
+        "remove": "إزالة"
+      },
+      "binding": {
+        "variablePlaceholder": "اسم المتغير",
+        "defaultValuePlaceholder": "القيمة الافتراضية"
       }
     },
     "mediaPicker": {
@@ -289,6 +300,31 @@
       },
       "section": {
         "propertyCount": "خاصية واحدة | {count} خصائص"
+      },
+      "media": {
+        "placeholder": "مسار نسبي أو رابط عام...",
+        "searchPlaceholder": "بحث عن الصور...",
+        "noImagesFound": "لم يتم العثور على صور",
+        "noImagesAvailable": "لا توجد صور متاحة",
+        "imageCount": "{count} من {total} صورة | {count} من {total} صور"
+      },
+      "icon": {
+        "placeholder": "i-lucide-icon",
+        "searchPlaceholder": "بحث عن الأيقونات...",
+        "noIconsFound": "لم يتم العثور على أيقونات",
+        "searchHint": "اكتب حرفين على الأقل للبحث",
+        "libraries": "المكتبات:",
+        "allLibraries": "الكل"
+      },
+      "text": {
+        "placeholder": "أدخل النص...",
+        "selectPlaceholder": "اختر خياراً..."
+      },
+      "date": {
+        "selectDate": "اختر تاريخاً"
+      },
+      "number": {
+        "placeholder": "0"
       }
     }
   }

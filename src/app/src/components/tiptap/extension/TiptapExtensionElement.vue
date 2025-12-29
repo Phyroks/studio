@@ -9,6 +9,7 @@ import { standardNuxtUIComponents } from '../../../utils/tiptap/editor'
 
 const nodeProps = defineProps(nodeViewProps)
 
+// @ts-expect-error vue-tsc error in cli
 const nodeViewContent = ref<HTMLElement>()
 
 const node = computed(() => nodeProps.node)
@@ -89,10 +90,9 @@ function addSlot(name: string) {
   editor.view.focus()
 }
 
-// TODO: Implement props editor component and use this function
-// function _updateProps(props: Record<string, unknown>) {
-//   nodeProps.updateAttributes({ props })
-// }
+function updateComponentProps(props: Record<string, unknown>) {
+  nodeProps.updateAttributes({ props })
+}
 </script>
 
 <template>
@@ -161,7 +161,7 @@ function addSlot(name: string) {
                 variant="ghost"
                 size="2xs"
                 class="text-muted hover:text-default"
-                icon="i-lucide-settings"
+                icon="i-lucide-sliders-horizontal"
                 :disabled="!isEditable"
                 :aria-label="$t('studio.tiptap.element.editProps')"
                 @click.stop
@@ -169,11 +169,10 @@ function addSlot(name: string) {
             </UTooltip>
 
             <template #content>
-              <UCard>
-                <div class="text-xs text-muted">
-                  {{ $t('studio.tiptap.element.propsEditorComingSoon') }}
-                </div>
-              </UCard>
+              <TiptapComponentProps
+                :node="node"
+                :update-props="updateComponentProps"
+              />
             </template>
           </UPopover>
 

@@ -251,7 +251,7 @@
         "delete": "Supprimer",
         "editContentLabel": "Modifier le contenu de {name}",
         "enterContentPlaceholder": "Saisir le contenu...",
-        "propsEditorComingSoon": "L'éditeur de propriétés arrive bientôt"
+        "apply": "Appliquer"
       },
       "codeBlock": {
         "filenamePlaceholder": "nomfichier.js"
@@ -261,6 +261,17 @@
         "applyLink": "Appliquer le lien",
         "openInNewWindow": "Ouvrir dans une nouvelle fenêtre",
         "removeLink": "Supprimer le lien"
+      },
+      "spanStyle": {
+        "label": "Style de span",
+        "stylePlaceholder": "Styles : ex. color: tomato; font-weight: 600;",
+        "classPlaceholder": "Classes : séparées par des espaces",
+        "apply": "Appliquer",
+        "remove": "Supprimer"
+      },
+      "binding": {
+        "variablePlaceholder": "Nom de la variable",
+        "defaultValuePlaceholder": "Valeur par défaut"
       }
     },
     "mediaPicker": {
@@ -290,6 +301,31 @@
       },
       "section": {
         "propertyCount": "1 propriété | {count} propriétés"
+      },
+      "media": {
+        "placeholder": "Chemin relatif ou URL publique...",
+        "searchPlaceholder": "Rechercher des images...",
+        "noImagesFound": "Aucune image trouvée",
+        "noImagesAvailable": "Aucune image disponible",
+        "imageCount": "{count} sur {total} image | {count} sur {total} images"
+      },
+      "icon": {
+        "placeholder": "i-lucide-icon",
+        "searchPlaceholder": "Rechercher des icônes...",
+        "noIconsFound": "Aucune icône trouvée",
+        "searchHint": "Tapez au moins 2 caractères pour rechercher",
+        "libraries": "Bibliothèques :",
+        "allLibraries": "Toutes"
+      },
+      "text": {
+        "placeholder": "Saisir du texte...",
+        "selectPlaceholder": "Sélectionner une option..."
+      },
+      "date": {
+        "selectDate": "Sélectionner une date"
+      },
+      "number": {
+        "placeholder": "0"
       }
     }
   }

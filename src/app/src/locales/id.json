@@ -251,7 +251,7 @@
         "delete": "Hapus",
         "editContentLabel": "Sunting konten {name}",
         "enterContentPlaceholder": "Masukkan konten...",
-        "propsEditorComingSoon": "Editor properti akan segera hadir"
+        "apply": "Terapkan"
       },
       "codeBlock": {
         "filenamePlaceholder": "namaberkas.js"
@@ -261,6 +261,17 @@
         "applyLink": "Terapkan tautan",
         "openInNewWindow": "Buka di jendela baru",
         "removeLink": "Hapus tautan"
+      },
+      "spanStyle": {
+        "label": "Gaya span",
+        "stylePlaceholder": "Gaya: contoh color: tomato; font-weight: 600;",
+        "classPlaceholder": "Kelas: dipisah spasi",
+        "apply": "Terapkan",
+        "remove": "Hapus"
+      },
+      "binding": {
+        "variablePlaceholder": "Nama variabel",
+        "defaultValuePlaceholder": "Nilai default"
       }
     },
     "mediaPicker": {
@@ -290,6 +301,31 @@
       },
       "section": {
         "propertyCount": "1 properti | {count} properti"
+      },
+      "media": {
+        "placeholder": "Path relatif atau URL publik...",
+        "searchPlaceholder": "Cari gambar...",
+        "noImagesFound": "Gambar tidak ditemukan",
+        "noImagesAvailable": "Tidak ada gambar tersedia",
+        "imageCount": "{count} dari {total} gambar"
+      },
+      "icon": {
+        "placeholder": "i-lucide-icon",
+        "searchPlaceholder": "Cari ikon...",
+        "noIconsFound": "Ikon tidak ditemukan",
+        "searchHint": "Ketik minimal 2 karakter untuk mencari",
+        "libraries": "Pustaka:",
+        "allLibraries": "Semua"
+      },
+      "text": {
+        "placeholder": "Masukkan teks...",
+        "selectPlaceholder": "Pilih opsi..."
+      },
+      "date": {
+        "selectDate": "Pilih tanggal"
+      },
+      "number": {
+        "placeholder": "0"
       }
     }
   }

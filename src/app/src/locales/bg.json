@@ -251,7 +251,7 @@
         "delete": "Изтриване",
         "editContentLabel": "Редактиране съдържанието на {name}",
         "enterContentPlaceholder": "Въведете съдържание...",
-        "propsEditorComingSoon": "Редакторът на свойства скоро ще бъде достъпен"
+        "apply": "Приложи"
       },
       "codeBlock": {
         "filenamePlaceholder": "ime-na-fail.js"
@@ -261,6 +261,17 @@
         "applyLink": "Прилагане на връзка",
         "openInNewWindow": "Отваряне в нов прозорец",
         "removeLink": "Премахване на връзката"
+      },
+      "spanStyle": {
+        "label": "Стил на span",
+        "stylePlaceholder": "Стилове: напр. color: tomato; font-weight: 600;",
+        "classPlaceholder": "Класове: разделени с интервали",
+        "apply": "Приложи",
+        "remove": "Премахни"
+      },
+      "binding": {
+        "variablePlaceholder": "Име на променливата",
+        "defaultValuePlaceholder": "Стойност по подразбиране"
       }
     },
     "mediaPicker": {
@@ -290,6 +301,31 @@
       },
       "section": {
         "propertyCount": "1 свойство | {count} свойства"
+      },
+      "media": {
+        "placeholder": "Относителен път или публичен URL...",
+        "searchPlaceholder": "Търсене на изображения...",
+        "noImagesFound": "Не са намерени изображения",
+        "noImagesAvailable": "Няма налични изображения",
+        "imageCount": "{count} от {total} изображение | {count} от {total} изображения"
+      },
+      "icon": {
+        "placeholder": "i-lucide-icon",
+        "searchPlaceholder": "Търсене на икони...",
+        "noIconsFound": "Не са намерени икони",
+        "searchHint": "Въведете поне 2 символа за търсене",
+        "libraries": "Библиотеки:",
+        "allLibraries": "Всички"
+      },
+      "text": {
+        "placeholder": "Въведете текст...",
+        "selectPlaceholder": "Изберете опция..."
+      },
+      "date": {
+        "selectDate": "Изберете дата"
+      },
+      "number": {
+        "placeholder": "0"
       }
     }
   }

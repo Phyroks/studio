@@ -251,7 +251,7 @@
         "delete": "Delete",
         "editContentLabel": "Edit {name} content",
         "enterContentPlaceholder": "Enter content...",
-        "propsEditorComingSoon": "Properties editor coming soon"
+        "apply": "Apply"
       },
       "codeBlock": {
         "filenamePlaceholder": "filename.js"
@@ -261,6 +261,17 @@
         "applyLink": "Apply link",
         "openInNewWindow": "Open in new window",
         "removeLink": "Remove link"
+      },
+      "spanStyle": {
+        "label": "Span style",
+        "stylePlaceholder": "Styles: e.g. color: tomato; font-weight: 600;",
+        "classPlaceholder": "Classes: space separated",
+        "apply": "Apply",
+        "remove": "Remove"
+      },
+      "binding": {
+        "variablePlaceholder": "Variable name",
+        "defaultValuePlaceholder": "Default value"
       }
     },
     "mediaPicker": {
@@ -290,6 +301,31 @@
       },
       "section": {
         "propertyCount": "1 property | {count} properties"
+      },
+      "media": {
+        "placeholder": "Enter relative path or Public URL...",
+        "searchPlaceholder": "Search images...",
+        "noImagesFound": "No images found",
+        "noImagesAvailable": "No images available",
+        "imageCount": "{count} of {total} image | {count} of {total} images"
+      },
+      "icon": {
+        "placeholder": "i-lucide-icon",
+        "searchPlaceholder": "Search icons...",
+        "noIconsFound": "No icons found",
+        "searchHint": "Type at least 2 characters to search",
+        "libraries": "Libraries:",
+        "allLibraries": "All"
+      },
+      "text": {
+        "placeholder": "Enter text...",
+        "selectPlaceholder": "Select an option..."
+      },
+      "date": {
+        "selectDate": "Select a date"
+      },
+      "number": {
+        "placeholder": "0"
       }
     }
   }

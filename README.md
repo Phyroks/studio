@@ -1,6 +1,8 @@
 # Nuxt Studio
 
-![npm version](https://img.shields.io/npm/v/nuxt-studio/beta.svg?style=flat\&colorA=020420\&colorB=EEEEEE)![npm downloads](https://img.shields.io/npm/dm/nuxt-studio.svg?style=flat\&colorA=020420\&colorB=EEEEEE)![License](https://img.shields.io/npm/l/nuxt-studio.svg?style=flat\&colorA=020420\&colorB=EEEEEE)
+[![npm version][npm-version-src]][npm-version-href]
+[![npm downloads][npm-downloads-src]][npm-downloads-href]
+[![License][license-src]][license-href]
 
 Visual edition in production for your [Nuxt Content](https://content.nuxt.com) website.
 
@@ -9,19 +11,17 @@ Originally offered as a standalone premium platform at <https://nuxt.studio>, St
 **Current Features** `BETA`
 
 - 💻 **Monaco Code Editor** - Code editor for enhanced Markdown with MDC syntax, YAML, and JSON
-- ✨ **TipTap Visual Editor** - WYSIWYG Markdown editor with MDC component support (default mode)
+- ✨ **TipTap Visual Editor** - Markdown editor with MDC component support (default mode)
 - 📝 **Form-based Editor** - Edit YAML/JSON files and frontmatter with auto-generated forms based on collection schemas
+- 🎨 **Vue Component Props Editor** - Visual interface for editing Vue component props directly in the editor
 - 🔄 **Real-time Preview** - See your changes instantly on your production website
 - 🔐 **Multi-provider Authentication** - Secure OAuth-based login with GitHub, GitLab, and Google
+- 🔑 **Custom Authentication** - Utilities for implementing your own auth flow (password, SSO, LDAP)
 - 📝 **File Management** - Create, edit, delete, and rename content files (`content/` directory)
 - 🖼️ **Media Management** - Centralized media library with support for JPEG, PNG, GIF, WebP, AVIF, SVG, and more
 - 🌳 **Git Integration** - Commit changes directly from your production website and just wait your CI/CD pipeline to deploy your changes
 - 🚀 **Development Mode** - Directly edit your content files and media files in your local filesystem using the module interface
-- 🌍 **16 Languages** - Full i18n support (AR, BG, DE, EN, ES, FA, FI, FR, ID, IT, JA, NL, PL, PT-BR, UA, ZH)
-
-**Coming in Beta:**
-
-- 🎨 **Vue Component Props Editor** - Visual interface for editing Vue component props and slots
+- 🌍 **17 Languages** - Full i18n support (AR, BG, DE, EN, ES, FA, FI, FR, ID, IT, JA, NL, PL, PT-BR, UA, ZH, ZH-TW)
 
 **Future Features:**
 
@@ -81,36 +81,33 @@ export default defineNuxtConfig({
 
 ### 4. Production Mode
 
-To enable publishing directly from your production website, you need to configure OAuth authentication.
+To enable publishing directly from your production website, you need to configure:
 
-#### Choose your Oauth provider
+#### Git Provider
 
-> [Browse the official documentation to configure the provider you want to use.](https://content.nuxt.com/docs/studio/providers)
+Configure where your content is stored (GitHub or GitLab repository). See the [repository configuration](#configuration-options) above.
+
+> [📖 Git Providers Documentation](https://content.nuxt.com/docs/studio/git-providers)
+
+#### Auth Provider
+
+Configure how users authenticate to access Studio. Choose from GitHub, GitLab, Google OAuth, or custom authentication.
+
+```bash
+# Example with GitHub OAuth
+STUDIO_GITHUB_CLIENT_ID=<your_client_id>
+STUDIO_GITHUB_CLIENT_SECRET=<your_client_secret>
+```
+
+> [📖 Auth Providers Documentation](https://content.nuxt.com/docs/studio/auth-providers)
 
 #### Deployment
 
 Nuxt Studio requires server-side routes for authentication. Your site must be **deployed on a platform that supports SSR** using `nuxt build`.
 
-If you want to pre-render all your pages, use hybrid rendering:
-
-```ts
-export default defineNuxtConfig({
-  nitro: {
-    prerender: {
-      routes: ['/'],
-      crawlLinks: true
-    }
-  }
-})
-```
-
 #### Open Studio
 
-Once deployed, log in Studio by navigating to your configured route (default: /_studio):
-
-1. Click the button corresponding to your Oauth provider if it does not directly redirect to the OAuth app authorization page
-2. Authorize the OAuth application
-3. You'll be redirected back to Studio ready to edit your content
+Once deployed, navigate to your configured route (default: `/_studio`) and authenticate to start editing.
 
 ## Configuration Options
 
@@ -196,7 +193,7 @@ pnpm lint
 
 ## Roadmap
 
-### ✅ Phase 1 - Alpha (Current)
+### ✅ Phase 1 - Beta (Completed)
 
 - [x] Monaco code editor
 - [x] TipTap visual editor with MDC support (default mode)
@@ -211,12 +208,11 @@ pnpm lint
 - [x] Development mode
 - [x] Git integration
 - [x] Real-time preview
-- [x] Internationalization (16 languages)
-
-### 🚧 Phase 2 - Beta (In Development)
-
-- [ ] Vue Component props editor (visual interface)
-- [ ] Provide utilities to allow users to handle their own authentication
+- [x] Internationalization (17 languages)
+- [x] Custom authentication utilities
+- [x] Vue Component props editor (visual interface)
+- [x] Span-style text formatting with toolbar button
+- [x] Binding extension for component prop editing
 
 ### 🔮 Future
 
@@ -237,3 +233,12 @@ pnpm lint
 ## License
 
 Published under the [MIT](LICENSE) license.
+
+[npm-version-src]: https://img.shields.io/npm/v/nuxt-studio/beta.svg?style=flat&colorA=020420&colorB=00DC82
+[npm-version-href]: https://npmjs.com/package/nuxt-studio
+
+[npm-downloads-src]: https://img.shields.io/npm/dm/nuxt-studio.svg?style=flat&colorA=020420&colorB=00DC82
+[npm-downloads-href]: https://npm.chart.dev/nuxt-studio
+
+[license-src]: https://img.shields.io/npm/l/nuxt-studio.svg?style=flat&colorA=020420&colorB=00DC82
+[license-href]: https://npmjs.com/package/nuxt-studio

@@ -251,7 +251,7 @@
         "delete": "حذف",
         "editContentLabel": "ویرایش محتوای {name}",
         "enterContentPlaceholder": "محتوا را وارد کنید...",
-        "propsEditorComingSoon": "ویرایشگر ویژگی‌ها به‌زودی در دسترس خواهد بود"
+        "apply": "اعمال"
       },
       "codeBlock": {
         "filenamePlaceholder": "نام-فایل.js"
@@ -261,6 +261,17 @@
         "applyLink": "اعمال پیوند",
         "openInNewWindow": "باز کردن در پنجره جدید",
         "removeLink": "حذف پیوند"
+      },
+      "spanStyle": {
+        "label": "سبک اسپن",
+        "stylePlaceholder": "سبک‌ها: مثلاً color: tomato; font-weight: 600;",
+        "classPlaceholder": "کلاس‌ها: با فاصله جدا شده",
+        "apply": "اعمال",
+        "remove": "حذف"
+      },
+      "binding": {
+        "variablePlaceholder": "نام متغیر",
+        "defaultValuePlaceholder": "مقدار پیش‌فرض"
       }
     },
     "mediaPicker": {
@@ -290,6 +301,31 @@
       },
       "section": {
         "propertyCount": "۱ ویژگی | {count} ویژگی"
+      },
+      "media": {
+        "placeholder": "مسیر نسبی یا URL عمومی...",
+        "searchPlaceholder": "جستجوی تصاویر...",
+        "noImagesFound": "تصویری یافت نشد",
+        "noImagesAvailable": "تصویری در دسترس نیست",
+        "imageCount": "{count} از {total} تصویر"
+      },
+      "icon": {
+        "placeholder": "i-lucide-icon",
+        "searchPlaceholder": "جستجوی آیکون‌ها...",
+        "noIconsFound": "آیکونی یافت نشد",
+        "searchHint": "حداقل ۲ کاراکتر برای جستجو وارد کنید",
+        "libraries": "کتابخانه‌ها:",
+        "allLibraries": "همه"
+      },
+      "text": {
+        "placeholder": "متن را وارد کنید...",
+        "selectPlaceholder": "یک گزینه انتخاب کنید..."
+      },
+      "date": {
+        "selectDate": "انتخاب تاریخ"
+      },
+      "number": {
+        "placeholder": "۰"
       }
     }
   }
