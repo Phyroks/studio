@@ -230,6 +230,8 @@
         "copyToClipboard": "کپی به کلیپ‌بورد",
         "moveUp": "حرکت به بالا",
         "moveDown": "حرکت به پایین",
+        "insertBefore": "درج قبل",
+        "insertAfter": "درج بعد",
         "delete": "حذف"
       },
       "element": {
@@ -237,8 +239,12 @@
         "editProps": "ویرایش ویژگی‌ها",
         "delete": "حذف",
         "prop": "ویژگی",
-        "props": "ویژگی‌ها",
-        "propsEditorComingSoon": "ویرایشگر ویژگی‌ها به‌زودی پیاده‌سازی خواهد شد..."
+        "props": {
+          "label": "ویژگی‌ها",
+          "itemsCount": "{count} مورد | {count} مورد",
+          "fieldsCount": "{count} فیلد | {count} فیلد",
+          "edit": "ویرایش {type}"
+        }
       },
       "slot": {
         "searchPlaceholder": "جستجو یا ایجاد اسلات...",
@@ -272,6 +278,29 @@
       "binding": {
         "variablePlaceholder": "نام متغیر",
         "defaultValuePlaceholder": "مقدار پیش‌فرض"
+      },
+      "image": {
+        "source": "URL منبع تصویر",
+        "altText": "متن جایگزین",
+        "title": "عنوان تصویر",
+        "width": "عرض",
+        "height": "ارتفاع",
+        "noSource": "منبع تصویر وجود ندارد",
+        "edit": "ویرایش تصویر",
+        "delete": "حذف تصویر"
+      },
+      "video": {
+        "source": "Video source URL",
+        "poster": "Poster image URL",
+        "width": "Width",
+        "height": "Height",
+        "controls": "Show controls",
+        "autoplay": "Autoplay",
+        "loop": "Loop",
+        "muted": "Muted",
+        "noSource": "No video source",
+        "edit": "Edit video",
+        "delete": "Delete video"
       }
     },
     "mediaPicker": {

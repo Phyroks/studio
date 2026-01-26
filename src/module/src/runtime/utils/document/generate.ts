@@ -81,8 +81,9 @@ export async function generateDocumentFromJSONContent(id: string, content: strin
 }
 
 export async function generateDocumentFromMarkdownContent(id: string, content: string, options: MarkdownParsingOptions = { compress: true }): Promise<DatabaseItem> {
+  const markdownConfig = useHostMeta().markdownConfig.value
   const document = await parseMarkdown(content, {
-    contentHeading: options.collectionType === 'page',
+    contentHeading: markdownConfig?.contentHeading !== false ? options.collectionType === 'page' : false,
     highlight: {
       theme: useHostMeta().highlightTheme.value,
     },
@@ -164,7 +165,7 @@ export async function generateContentFromJSONDocument(document: DatabaseItem): P
 
 export async function generateContentFromMarkdownDocument(document: DatabaseItem): Promise<string | null> {
   // @ts-expect-error todo fix MarkdownRoot/MDCRoot conversion in MDC module
-  const body = document.body.type === 'minimark' ? decompressTree(document.body) : (document.body as MDCRoot)
+  const body = document.body!.type === 'minimark' ? decompressTree(document.body) : (document.body as MDCRoot)
 
   // Remove nofollow from links
   visit(body, (node: Node) => (node as MDCElement).type === 'element' && (node as MDCElement).tag === 'a', (node: Node) => {

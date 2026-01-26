@@ -1,71 +1,82 @@
 import { flatCase, pascalCase, titleCase, upperFirst } from 'scule'
-import { hasProtocol } from 'ufo'
+import { hasProtocol, isRelative } from 'ufo'
 import type { Node as ProseMirrorNode } from '@tiptap/pm/model'
 import type { JSType } from 'untyped'
 import type { FormItem, FormTree } from '../../types'
 import type { ComponentMeta } from '../../types/component'
 import type { PropertyMeta, PropertyMetaSchema } from 'vue-component-meta'
 
-const HIDDEN_PROPS = ['ui', 'as', 'activeClass', 'inactiveClass', 'exactActiveClass', 'ariaCurrentValue', 'href', 'rel', 'noRel', 'prefetch', 'prefetchOn', 'noPrefetch', 'prefetchedClass', 'replace', 'exact', 'exactQuery', 'exactHash', 'external', 'onClick', 'viewTransition', 'loading', 'loadingIcon', 'as', 'activeColor', 'activeVariant', 'loading', 'loadingIcon', 'loadingAuto', 'disabled', 'active', 'leading', 'trailing', 'customize', 'formaction', 'formenctype', 'formmethod', 'formnovalidate', 'formtarget']
+const HIDDEN_PROPS = [
+  'ui',
+  'as',
+  'activeClass',
+  'inactiveClass',
+  'exactActiveClass',
+  'ariaCurrentValue',
+  'href',
+  'rel',
+  'noRel',
+  'prefetch',
+  'prefetchOn',
+  'noPrefetch',
+  'prefetchedClass',
+  'replace',
+  'exact',
+  'exactQuery',
+  'exactHash',
+  'external',
+  'onClick',
+  'viewTransition',
+  'loading',
+  'loadingIcon',
+  'loadingAuto',
+  'disabled',
+  'active',
+  'leading',
+  'trailing',
+  'customize',
+  'form',
+  'formaction',
+  'formenctype',
+  'formmethod',
+  'formnovalidate',
+  'formtarget',
+  'enterKeyHint',
+  'activeColor',
+  'activeVariant',
+  'onClick',
+]
 
-// https://developer.mozilla.org/fr/docs/Web/HTML/Element/video#attributs
-// const videoProps = [
-//   {
-//     name: 'src',
-//     schema: 'string',
-//   },
-//   {
-//     name: 'autoplay',
-//     schema: 'boolean',
-//   },
-//   {
-//     name: 'controls',
-//     schema: 'boolean',
-//   },
-//   {
-//     name: 'loop',
-//     schema: 'boolean',
-//   },
-//   {
-//     name: 'muted',
-//     schema: 'boolean',
-//   },
-//   {
-//     name: 'poster',
-//     schema: 'string',
-//   },
-//   {
-//     name: 'preload',
-//     schema: 'string',
-//   },
-//   {
-//     name: 'width',
-//     schema: 'number',
-//   },
-//   {
-//     name: 'height',
-//     schema: 'number',
-//   },
-// ] as Array<PropertyMeta>
+/**
+ * Validate and sanitize media URL (images and videos)
+ */
+export function sanitizeMediaUrl(url: string, mediaType: 'image' | 'video'): string | null {
+  if (!url) return null
 
-// const imgProps = [
-//   {
-//     name: 'src',
-//     schema: 'string',
-//   },
-//   {
-//     name: 'alt',
-//     schema: 'string',
-//   },
-//   {
-//     name: 'width',
-//     schema: 'number',
-//   },
-//   {
-//     name: 'height',
-//     schema: 'number',
-//   },
-// ] as Array<PropertyMeta>
+  // Allow relative URLs (./file.jpg, ../file.mp4)
+  if (isRelative(url)) return url
+
+  // Allow absolute paths from root (/file.jpg)
+  if (url.startsWith('/')) return url
+
+  // Allow data URLs for specific media type
+  if (url.startsWith(`data:${mediaType}/`)) return url
+
+  // For URLs with protocol, only allow http/https
+  if (hasProtocol(url)) {
+    try {
+      const parsed = new URL(url)
+      if (['http:', 'https:'].includes(parsed.protocol)) {
+        return url
+      }
+    }
+    catch {
+      return null
+    }
+  }
+
+  return null
+}
 
 /**
  * Check if a value is valid, not null or undefined
@@ -82,20 +93,25 @@ export const isValidAttr = (value?: string | null) => {
  * Clean span props, removing null and undefined values
  */
 export const cleanSpanProps = (attrs?: Record<string, unknown> | null) => {
-  const props: Record<string, string> = {}
+  const props: Record<string, string | string[]> = {}
   if (isValidAttr(attrs?.style as string)) props.style = String(attrs!.style).trim()
-  if (isValidAttr((attrs as Record<string, unknown>)?.class as string)) props.class = String((attrs as Record<string, unknown>).class).trim()
+  if (isValidAttr((attrs as Record<string, unknown>)?.class as string)) {
+    const classValue = String((attrs as Record<string, unknown>).class).trim()
+    // Convert space-separated class string back to array for className
+    props.className = classValue.split(' ')
+  }
   return props
 }
 
 /**
- * Process and normalize element props, converting className to class
+ * Process and normalize element props, preserving className as array
  */
-export function normalizeProps(nodeProps: Record<string, unknown>, extraProps: object): Array<[string, string]> {
+export function normalizeProps(nodeProps: Record<string, unknown>, extraProps: object): Array<[string, string | string[]]> {
   return Object.entries({ ...nodeProps, ...extraProps })
     .map(([key, value]) => {
       if (key === 'className') {
-        return ['class', typeof value === 'string' ? value : (value as Array<string>).join(' ')] as [string, string]
+        // Keep className as array if it's already an array
+        return ['className', value] as [string, string | string[]]
       }
       return [key.trim(), String(value).trim()] as [string, string]
     })
@@ -107,7 +123,7 @@ export const buildFormTreeFromProps = (node: ProseMirrorNode, componentMeta: Com
   const props = componentMeta.meta.props
   const nodeProps = node?.attrs?.props || {}
   const formTree: FormTree = {}
-  const componentName = pascalCase(node?.attrs?.tag)
+  const componentName = pascalCase(node?.attrs?.tag || componentMeta.name)
   const componentId = generateComponentId(componentName)
 
   // Meta props
@@ -125,25 +141,6 @@ export const buildFormTreeFromProps = (node: ProseMirrorNode, componentMeta: Com
         formTree[propItem.key!] = propItem
       }
     }
-  }
-  // HTML element props
-  else {
-    // let elementProps: Array<PropertyMeta> = []
-    // switch (node?.type?.name) {
-    //   case 'video':
-    //     elementProps = videoProps
-    //     break
-    //   case 'image':
-    //     elementProps = imgProps
-    //     break
-    // }
-
-    // for (const prop of elementProps) {
-    //   const propItem = buildPropItem(componentId, prop, nodeProps)
-    //   if (propItem) {
-    //     formTree[propItem.key!] = propItem
-    //   }
-    // }
   }
 
   // Add custom props added manually by user
@@ -218,8 +215,10 @@ const buildPropItem = (componentId: string, prop: PropertyMeta, nodeProps: Recor
 
   const { type, options } = computeTypeAndOptions(componentId, key, prop, level)
 
+  const isInsideArrayItem = parent?.id?.includes('#array/items')
+
   // Format key based on type
-  const formattedKey = ['string', 'icon'].includes(type) ? key : `:${key}`
+  const formattedKey = ['string', 'icon'].includes(type) || isInsideArrayItem ? key : `:${key}`
   const id = parent?.id
     ? `${parent?.id}/${formattedKey}`
     : `${componentId}/${formattedKey}`

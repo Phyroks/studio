@@ -230,6 +230,8 @@
         "copyToClipboard": "Copia negli appunti",
         "moveUp": "Sposta su",
         "moveDown": "Sposta giù",
+        "insertBefore": "Inserisci prima",
+        "insertAfter": "Inserisci dopo",
         "delete": "Elimina"
       },
       "element": {
@@ -237,8 +239,12 @@
         "editProps": "Modifica props",
         "delete": "Elimina",
         "prop": "prop",
-        "props": "props",
-        "propsEditorComingSoon": "L'editor delle props sarà implementato presto..."
+        "props": {
+          "label": "props",
+          "itemsCount": "{count} elemento | {count} elementi",
+          "fieldsCount": "{count} campo | {count} campi",
+          "edit": "Modifica {type}"
+        }
       },
       "slot": {
         "searchPlaceholder": "Cerca o crea uno slot...",
@@ -272,6 +278,29 @@
       "binding": {
         "variablePlaceholder": "Nome variabile",
         "defaultValuePlaceholder": "Valore predefinito"
+      },
+      "image": {
+        "source": "URL origine immagine",
+        "altText": "Testo alternativo",
+        "title": "Titolo immagine",
+        "width": "Larghezza",
+        "height": "Altezza",
+        "noSource": "Nessuna fonte immagine",
+        "edit": "Modifica immagine",
+        "delete": "Elimina immagine"
+      },
+      "video": {
+        "source": "Video source URL",
+        "poster": "Poster image URL",
+        "width": "Width",
+        "height": "Height",
+        "controls": "Show controls",
+        "autoplay": "Autoplay",
+        "loop": "Loop",
+        "muted": "Muted",
+        "noSource": "No video source",
+        "edit": "Edit video",
+        "delete": "Delete video"
       }
     },
     "mediaPicker": {

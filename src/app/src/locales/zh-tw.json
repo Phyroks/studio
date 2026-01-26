@@ -230,6 +230,8 @@
         "copyToClipboard": "複製到剪貼簿",
         "moveUp": "上移",
         "moveDown": "下移",
+        "insertBefore": "在前方插入",
+        "insertAfter": "在後方插入",
         "delete": "刪除"
       },
       "element": {
@@ -237,8 +239,12 @@
         "editProps": "編輯屬性",
         "delete": "刪除",
         "prop": "屬性",
-        "props": "屬性",
-        "propsEditorComingSoon": "屬性編輯器即將推出..."
+        "props": {
+          "label": "屬性",
+          "itemsCount": "{count} 個項目",
+          "fieldsCount": "{count} 個欄位",
+          "edit": "編輯{type}"
+        }
       },
       "slot": {
         "searchPlaceholder": "搜尋或建立插槽...",
@@ -272,6 +278,29 @@
       "binding": {
         "variablePlaceholder": "變數名稱",
         "defaultValuePlaceholder": "預設值"
+      },
+      "image": {
+        "source": "圖像源 URL",
+        "altText": "替代文字",
+        "title": "圖像標題",
+        "width": "寬度",
+        "height": "高度",
+        "noSource": "無圖像源",
+        "edit": "編輯圖像",
+        "delete": "刪除圖像"
+      },
+      "video": {
+        "source": "Video source URL",
+        "poster": "Poster image URL",
+        "width": "Width",
+        "height": "Height",
+        "controls": "Show controls",
+        "autoplay": "Autoplay",
+        "loop": "Loop",
+        "muted": "Muted",
+        "noSource": "No video source",
+        "edit": "Edit video",
+        "delete": "Delete video"
       }
     },
     "mediaPicker": {

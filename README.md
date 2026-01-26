@@ -6,9 +6,11 @@
 
 Visual edition in production for your [Nuxt Content](https://content.nuxt.com) website.
 
-Originally offered as a standalone premium platform at <https://nuxt.studio>, Studio has evolved into a free, open-source, and self-hostable Nuxt module. Enable your entire team to edit website content right in production.
+Originally offered as a standalone premium platform, Studio has evolved into a free, open-source, and self-hostable Nuxt module. Enable your entire team to edit website content right in production.
 
-**Current Features** `BETA`
+https://github.com/user-attachments/assets/39bf4250-e72b-45aa-bf6d-9441a38cb2d5
+
+**Current Features**
 
 - 💻 **Monaco Code Editor** - Code editor for enhanced Markdown with MDC syntax, YAML, and JSON
 - ✨ **TipTap Visual Editor** - Markdown editor with MDC component support (default mode)
@@ -21,7 +23,7 @@ Originally offered as a standalone premium platform at <https://nuxt.studio>, St
 - 🖼️ **Media Management** - Centralized media library with support for JPEG, PNG, GIF, WebP, AVIF, SVG, and more
 - 🌳 **Git Integration** - Commit changes directly from your production website and just wait your CI/CD pipeline to deploy your changes
 - 🚀 **Development Mode** - Directly edit your content files and media files in your local filesystem using the module interface
-- 🌍 **17 Languages** - Full i18n support (AR, BG, DE, EN, ES, FA, FI, FR, ID, IT, JA, NL, PL, PT-BR, UA, ZH, ZH-TW)
+- 🌍 **22 Languages** - Full i18n support (AR, BG, CS, DE, EN, ES, FA, FI, FR, ID, IT, JA, KO, NB-NO, NL, NN-NO, PL, PT-BR, RU, UA, ZH, ZH-TW)
 
 **Future Features:**
 
@@ -32,7 +34,7 @@ Originally offered as a standalone premium platform at <https://nuxt.studio>, St
 
 ### Resources
 
-- [📖 Documentation](https://content.nuxt.com/docs/studio/setup)
+- [📖 Documentation](https://nuxt.studio/)
 - [🎮 Live Demo](https://docus.dev/admin)
 
 ## Quick Setup
@@ -42,7 +44,7 @@ Originally offered as a standalone premium platform at <https://nuxt.studio>, St
 Install the module in your Nuxt application:
 
 ```bash
-npx nuxi module add nuxt-studio@beta
+npx nuxi module add nuxt-studio
 ```
 
 ### 2. Dev Mode
@@ -87,7 +89,7 @@ To enable publishing directly from your production website, you need to configur
 
 Configure where your content is stored (GitHub or GitLab repository). See the [repository configuration](#configuration-options) above.
 
-> [📖 Git Providers Documentation](https://content.nuxt.com/docs/studio/git-providers)
+> [📖 Git Providers Documentation](https://nuxt.studio/git-providers)
 
 #### Auth Provider
 
@@ -99,7 +101,7 @@ STUDIO_GITHUB_CLIENT_ID=<your_client_id>
 STUDIO_GITHUB_CLIENT_SECRET=<your_client_secret>
 ```
 
-> [📖 Auth Providers Documentation](https://content.nuxt.com/docs/studio/auth-providers)
+> [📖 Auth Providers Documentation](https://nuxt.studio/auth-providers)
 
 #### Deployment
 
@@ -193,7 +195,7 @@ pnpm lint
 
 ## Roadmap
 
-### ✅ Phase 1 - Beta (Completed)
+### ✅ Phase 1 (Completed)
 
 - [x] Monaco code editor
 - [x] TipTap visual editor with MDC support (default mode)
@@ -208,7 +210,7 @@ pnpm lint
 - [x] Development mode
 - [x] Git integration
 - [x] Real-time preview
-- [x] Internationalization (17 languages)
+- [x] Internationalization (22 languages)
 - [x] Custom authentication utilities
 - [x] Vue Component props editor (visual interface)
 - [x] Span-style text formatting with toolbar button
@@ -234,7 +236,7 @@ pnpm lint
 
 Published under the [MIT](LICENSE) license.
 
-[npm-version-src]: https://img.shields.io/npm/v/nuxt-studio/beta.svg?style=flat&colorA=020420&colorB=00DC82
+[npm-version-src]: https://img.shields.io/npm/v/nuxt-studio?style=flat&colorA=020420&colorB=00DC82
 [npm-version-href]: https://npmjs.com/package/nuxt-studio
 
 [npm-downloads-src]: https://img.shields.io/npm/dm/nuxt-studio.svg?style=flat&colorA=020420&colorB=00DC82

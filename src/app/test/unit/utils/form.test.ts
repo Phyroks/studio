@@ -692,6 +692,87 @@ describe('buildFormTreeFromSchema', () => {
       },
     })
   })
+
+  test('handle date and datetime types', () => {
+    const schema: Draft07 = {
+      $schema: 'http://json-schema.org/draft-07/schema#',
+      $ref: '#/definitions/posts',
+      definitions: {
+        posts: {
+          type: 'object',
+          properties: {
+            date: {
+              type: 'date',
+            },
+            datetime: {
+              type: 'datetime',
+            },
+          },
+          additionalProperties: false,
+          required: [],
+        },
+      },
+    }
+
+    expect(buildFormTreeFromSchema('posts', schema)).toStrictEqual({
+      posts: {
+        id: '#posts',
+        type: 'object',
+        title: 'Posts',
+        children: {
+          date: {
+            id: '#posts/date',
+            type: 'date',
+            title: 'Date',
+          },
+          datetime: {
+            id: '#posts/datetime',
+            type: 'datetime',
+            title: 'Datetime',
+          },
+        },
+      },
+    })
+  })
+
+  test('handle textarea type', () => {
+    const schema: Draft07 = {
+      $schema: 'http://json-schema.org/draft-07/schema#',
+      $ref: '#/definitions/posts',
+      definitions: {
+        posts: {
+          type: 'object',
+          properties: {
+            description: {
+              type: 'string',
+              $content: {
+                editor: {
+                  input: 'textarea',
+                },
+              },
+            },
+          },
+          additionalProperties: false,
+          required: [],
+        },
+      },
+    }
+
+    expect(buildFormTreeFromSchema('posts', schema)).toStrictEqual({
+      posts: {
+        id: '#posts',
+        type: 'object',
+        title: 'Posts',
+        children: {
+          description: {
+            id: '#posts/description',
+            type: 'textarea', // Verifies your new type is correctly assigned
+            title: 'Description',
+          },
+        },
+      },
+    })
+  })
 })
 
 describe('applyValuesToFormTree', () => {

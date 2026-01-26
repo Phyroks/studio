@@ -230,6 +230,8 @@
         "copyToClipboard": "Copier dans le presse-papiers",
         "moveUp": "Monter",
         "moveDown": "Descendre",
+        "insertBefore": "Insérer avant",
+        "insertAfter": "Insérer après",
         "delete": "Supprimer"
       },
       "element": {
@@ -237,8 +239,12 @@
         "editProps": "Modifier les propriétés",
         "delete": "Supprimer",
         "prop": "propriété",
-        "props": "propriétés",
-        "propsEditorComingSoon": "L'éditeur de propriétés sera bientôt disponible..."
+        "props": {
+          "label": "propriétés",
+          "itemsCount": "{count} élément | {count} éléments",
+          "fieldsCount": "{count} champ | {count} champs",
+          "edit": "Modifier {type}"
+        }
       },
       "slot": {
         "searchPlaceholder": "Rechercher ou créer un slot...",
@@ -272,6 +278,29 @@
       "binding": {
         "variablePlaceholder": "Nom de la variable",
         "defaultValuePlaceholder": "Valeur par défaut"
+      },
+      "image": {
+        "source": "URL de la source de l'image",
+        "altText": "Texte alternatif",
+        "title": "Titre de l'image",
+        "width": "Largeur",
+        "height": "Hauteur",
+        "noSource": "Aucune source d'image",
+        "edit": "Modifier l'image",
+        "delete": "Supprimer l'image"
+      },
+      "video": {
+        "source": "Video source URL",
+        "poster": "Poster image URL",
+        "width": "Width",
+        "height": "Height",
+        "controls": "Show controls",
+        "autoplay": "Autoplay",
+        "loop": "Loop",
+        "muted": "Muted",
+        "noSource": "No video source",
+        "edit": "Edit video",
+        "delete": "Delete video"
       }
     },
     "mediaPicker": {

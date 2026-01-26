@@ -230,6 +230,8 @@
         "copyToClipboard": "Kopírovat do schránky",
         "moveUp": "Posunout nahoru",
         "moveDown": "Posunout dolů",
+        "insertBefore": "Vložit před",
+        "insertAfter": "Vložit za",
         "delete": "Smazat"
       },
       "element": {
@@ -237,8 +239,12 @@
         "editProps": "Upravit vlastnosti (props)",
         "delete": "Smazat",
         "prop": "prop",
-        "props": "props",
-        "propsEditorComingSoon": "Editor vlastností (props) bude brzy implementován..."
+        "props": {
+          "label": "props",
+          "itemsCount": "{count} položka | {count} položek",
+          "fieldsCount": "{count} pole | {count} polí",
+          "edit": "Upravit {type}"
+        }
       },
       "slot": {
         "searchPlaceholder": "Vyhledat nebo vytvořit slot...",
@@ -272,6 +278,29 @@
       "binding": {
         "variablePlaceholder": "Název proměnné",
         "defaultValuePlaceholder": "Výchozí hodnota"
+      },
+      "image": {
+        "source": "URL zdroje obrázku",
+        "altText": "Alternativní text",
+        "title": "Název obrázku",
+        "width": "Šířka",
+        "height": "Výška",
+        "noSource": "Žádný zdroj obrázku",
+        "edit": "Upravit obrázek",
+        "delete": "Smazat obrázek"
+      },
+      "video": {
+        "source": "Video source URL",
+        "poster": "Poster image URL",
+        "width": "Width",
+        "height": "Height",
+        "controls": "Show controls",
+        "autoplay": "Autoplay",
+        "loop": "Loop",
+        "muted": "Muted",
+        "noSource": "No video source",
+        "edit": "Edit video",
+        "delete": "Delete video"
       }
     },
     "mediaPicker": {

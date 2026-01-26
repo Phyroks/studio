@@ -230,6 +230,8 @@
         "copyToClipboard": "Скопировать в буфер обмена",
         "moveUp": "Переместить вверх",
         "moveDown": "Переместить вниз",
+        "insertBefore": "Вставить перед",
+        "insertAfter": "Вставить после",
         "delete": "Удалить"
       },
       "element": {
@@ -237,8 +239,12 @@
         "editProps": "Редактировать свойства",
         "delete": "Удалить",
         "prop": "свойство",
-        "props": "свойства",
-        "propsEditorComingSoon": "Редактор свойств будет реализован скоро..."
+        "props": {
+          "label": "свойства",
+          "itemsCount": "{count} элемент | {count} элементов",
+          "fieldsCount": "{count} поле | {count} полей",
+          "edit": "Редактировать {type}"
+        }
       },
       "slot": {
         "searchPlaceholder": "Поиск или создание слота...",
@@ -272,6 +278,29 @@
       "binding": {
         "variablePlaceholder": "Имя переменной",
         "defaultValuePlaceholder": "Значение по умолчанию"
+      },
+      "image": {
+        "source": "URL источника изображения",
+        "altText": "Альтернативный текст",
+        "title": "Название изображения",
+        "width": "Ширина",
+        "height": "Высота",
+        "noSource": "Нет источника изображения",
+        "edit": "Редактировать изображение",
+        "delete": "Удалить изображение"
+      },
+      "video": {
+        "source": "Video source URL",
+        "poster": "Poster image URL",
+        "width": "Width",
+        "height": "Height",
+        "controls": "Show controls",
+        "autoplay": "Autoplay",
+        "loop": "Loop",
+        "muted": "Muted",
+        "noSource": "No video source",
+        "edit": "Edit video",
+        "delete": "Delete video"
       }
     },
     "mediaPicker": {

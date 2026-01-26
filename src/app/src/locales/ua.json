@@ -229,6 +229,8 @@
         "copyToClipboard": "Копіювати в буфер обміну",
         "moveUp": "Перемістити вгору",
         "moveDown": "Перемістити вниз",
+        "insertBefore": "Вставити перед",
+        "insertAfter": "Вставити після",
         "delete": "Видалити"
       },
       "element": {
@@ -236,8 +238,12 @@
         "editProps": "Редагувати властивості",
         "delete": "Видалити",
         "prop": "властивість",
-        "props": "властивості",
-        "propsEditorComingSoon": "Редактор властивостей буде реалізовано найближчим часом..."
+        "props": {
+          "label": "властивості",
+          "itemsCount": "{count} елемент | {count} елементів",
+          "fieldsCount": "{count} поле | {count} полів",
+          "edit": "Редагувати {type}"
+        }
       },
       "slot": {
         "searchPlaceholder": "Шукати або створити слот...",
@@ -271,6 +277,29 @@
       "binding": {
         "variablePlaceholder": "Назва змінної",
         "defaultValuePlaceholder": "Значення за замовчуванням"
+      },
+      "image": {
+        "source": "URL джерела зображення",
+        "altText": "Альтернативний текст",
+        "title": "Назва зображення",
+        "width": "Ширина",
+        "height": "Висота",
+        "noSource": "Немає джерела зображення",
+        "edit": "Редагувати зображення",
+        "delete": "Видалити зображення"
+      },
+      "video": {
+        "source": "Video source URL",
+        "poster": "Poster image URL",
+        "width": "Width",
+        "height": "Height",
+        "controls": "Show controls",
+        "autoplay": "Autoplay",
+        "loop": "Loop",
+        "muted": "Muted",
+        "noSource": "No video source",
+        "edit": "Edit video",
+        "delete": "Delete video"
       }
     },
     "mediaPicker": {

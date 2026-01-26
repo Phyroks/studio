@@ -229,6 +229,8 @@
         "copyToClipboard": "نسخ إلى الحافظة",
         "moveUp": "نقل لأعلى",
         "moveDown": "نقل لأسفل",
+        "insertBefore": "إدراج قبل",
+        "insertAfter": "إدراج بعد",
         "delete": "حذف"
       },
       "element": {
@@ -236,8 +238,12 @@
         "editProps": "تعديل الخصائص",
         "delete": "حذف",
         "prop": "خاصية",
-        "props": "خصائص",
-        "propsEditorComingSoon": "سيتم تنفيذ محرر الخصائص قريباً..."
+        "props": {
+          "label": "خصائص",
+          "itemsCount": "{count} عنصر | {count} عناصر",
+          "fieldsCount": "{count} حقل | {count} حقول",
+          "edit": "تعديل {type}"
+        }
       },
       "slot": {
         "searchPlaceholder": "البحث أو إنشاء فتحة...",
@@ -271,6 +277,29 @@
       "binding": {
         "variablePlaceholder": "اسم المتغير",
         "defaultValuePlaceholder": "القيمة الافتراضية"
+      },
+      "image": {
+        "source": "عنوان URL لمصدر الصورة",
+        "altText": "نص بديل",
+        "title": "عنوان الصورة",
+        "width": "العرض",
+        "height": "الارتفاع",
+        "noSource": "لا يوجد مصدر للصورة",
+        "edit": "تحرير الصورة",
+        "delete": "حذف الصورة"
+      },
+      "video": {
+        "source": "Video source URL",
+        "poster": "Poster image URL",
+        "width": "Width",
+        "height": "Height",
+        "controls": "Show controls",
+        "autoplay": "Autoplay",
+        "loop": "Loop",
+        "muted": "Muted",
+        "noSource": "No video source",
+        "edit": "Edit video",
+        "delete": "Delete video"
       }
     },
     "mediaPicker": {

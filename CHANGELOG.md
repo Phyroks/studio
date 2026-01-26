@@ -1,5 +1,61 @@
 # Changelog
 
+## [1.2.0](https://github.com/nuxt-content/studio/compare/v1.1.1...v1.2.0) (2026-01-23)
+
+### Features
+
+* **editor:** custom image extension ([#294](https://github.com/nuxt-content/studio/issues/294)) ([6ca0818](https://github.com/nuxt-content/studio/commit/6ca0818111e7213760941029c48d0fb0cfd9637a))
+* **editor:** custom video extension ([#300](https://github.com/nuxt-content/studio/issues/300)) ([d05ac37](https://github.com/nuxt-content/studio/commit/d05ac378c7cfa857a5285c703b2aa22b8b942a23))
+
+### Bug Fixes
+
+* **editor:** duplicated boolean props ([#299](https://github.com/nuxt-content/studio/issues/299)) ([ff99c64](https://github.com/nuxt-content/studio/commit/ff99c64f66d2504376dc35f74b80323ef285f320))
+* **editor:** separate classes by dots ([#301](https://github.com/nuxt-content/studio/issues/301)) ([be0a4d2](https://github.com/nuxt-content/studio/commit/be0a4d21e9b42cc468b2c4ed0b8262d6c5e4de89))
+* **ItemCardForm:** ensure fsPath has no leading path ([55eddac](https://github.com/nuxt-content/studio/commit/55eddac614904322875a4de9d0a6b7c98fd5289b))
+* **lint:** no any ([d14b94b](https://github.com/nuxt-content/studio/commit/d14b94bbc6a15329438b61574d762e3a80fcd4e2))
+* **state:** create custom shared composable ([3ff2a1f](https://github.com/nuxt-content/studio/commit/3ff2a1fc6737bfcf469fda8db6cedabfa72eeaf3))
+* **tree:** sort items numerically by prefix then name ([#293](https://github.com/nuxt-content/studio/issues/293)) ([7ceacde](https://github.com/nuxt-content/studio/commit/7ceacde9ee445b48492c7e03da872ed8f2773c48))
+
+## [1.1.1](https://github.com/nuxt-content/studio/compare/v1.1.0...v1.1.1) (2026-01-19)
+
+### Bug Fixes
+
+* **auth:** studio cookie handling ([#284](https://github.com/nuxt-content/studio/issues/284)) ([4df7f56](https://github.com/nuxt-content/studio/commit/4df7f56e97796713c7d74fbcb0f980a07e1bc5b3))
+* **ItemCardForm:** do not slugify whole path ([#290](https://github.com/nuxt-content/studio/issues/290)) ([fab454f](https://github.com/nuxt-content/studio/commit/fab454f957c5c0e2faa1bd1207639822f738dd4c))
+* **source:** replace prefix without leading slash ([#291](https://github.com/nuxt-content/studio/issues/291)) ([81450ab](https://github.com/nuxt-content/studio/commit/81450ab9e1f7132819e4cd086ee6c24110c9b7a8))
+
+## [1.1.0](https://github.com/nuxt-content/studio/compare/v1.0.0...v1.1.0) (2026-01-14)
+
+### Features
+
+* ** editor:** add textarea input in form editor ([#264](https://github.com/nuxt-content/studio/issues/264)) ([d20a7c4](https://github.com/nuxt-content/studio/commit/d20a7c456f6e9bb05dcf91f6d790a8d2eb294f9d))
+* **auth:** add login and logout server runtime hooks ([#263](https://github.com/nuxt-content/studio/issues/263)) ([3b98f54](https://github.com/nuxt-content/studio/commit/3b98f54e892df2e3de47ad9a0b0cd4a9a5f9bf0e))
+* **editor:** support datetime input + fix date input ([#234](https://github.com/nuxt-content/studio/issues/234)) ([67f659c](https://github.com/nuxt-content/studio/commit/67f659cff12757f2e4c424a1a60b49674bb21d8e))
+* **form:** detect potential media/icon selection + improve object inputs ([#255](https://github.com/nuxt-content/studio/issues/255)) ([de38ed8](https://github.com/nuxt-content/studio/commit/de38ed8353827939e1d54ccb67917f276fa1e3dd))
+* **frontmatter:** remove hidden fields before passing document to studio editor ([#254](https://github.com/nuxt-content/studio/issues/254)) ([b0f0827](https://github.com/nuxt-content/studio/commit/b0f08270fed24307ed3a234fae910bdf4a328306))
+* **i18n:** add Kurdish (ckb) locale ([#270](https://github.com/nuxt-content/studio/issues/270)) ([ac15b8c](https://github.com/nuxt-content/studio/commit/ac15b8c00239be8f0d7e2c3ff1de0613ac84fbbd))
+* **i18n:** add Vietnamese (vi) locale ([#256](https://github.com/nuxt-content/studio/issues/256)) ([399e465](https://github.com/nuxt-content/studio/commit/399e465edeba67156b19d61296e1e8f853380034))
+* **meta:** add component filtering in editor ([#260](https://github.com/nuxt-content/studio/issues/260)) ([185ab76](https://github.com/nuxt-content/studio/commit/185ab76b1809c402ff2b2b422d01776839adcb0f))
+* **tiptap:** add insertion actions to drag actions ([#246](https://github.com/nuxt-content/studio/issues/246)) ([c33a2dd](https://github.com/nuxt-content/studio/commit/c33a2dde6601a5cd7e03412f24f1abc88c5f8c62))
+
+### Bug Fixes
+
+* **app:** reduce z-index to let other modal show over it ([#238](https://github.com/nuxt-content/studio/issues/238)) ([a740855](https://github.com/nuxt-content/studio/commit/a740855cc04afa71d6909dea51e78404859af121))
+* **collection:** handle collection prefix ([#242](https://github.com/nuxt-content/studio/issues/242)) ([d09d54e](https://github.com/nuxt-content/studio/commit/d09d54e1295a97f6232fbcaf38b0a369234a5419))
+* **document:** respect `contentHeading` option ([#215](https://github.com/nuxt-content/studio/issues/215)) ([ca79f02](https://github.com/nuxt-content/studio/commit/ca79f028d52666726ee16f6b4972641721da8d17))
+* **form:** arrays edition ([#257](https://github.com/nuxt-content/studio/issues/257)) ([e10ed37](https://github.com/nuxt-content/studio/commit/e10ed37c95a14123cdc0cb546fc70d6a83eabcb7))
+* **itemCardForm:** slugify file path ([#228](https://github.com/nuxt-content/studio/issues/228)) ([830fc03](https://github.com/nuxt-content/studio/commit/830fc03ec9a69d5c9b695d33d9302556dbf2a49a))
+* **tiptapToMdc:** unwrap paragraphs inside slot ([#247](https://github.com/nuxt-content/studio/issues/247)) ([a7a0d92](https://github.com/nuxt-content/studio/commit/a7a0d929e6a2076cceb9acb77d886d5662f124af))
+
+## [1.0.0](https://github.com/nuxt-content/studio/compare/v1.0.0-beta.3...v1.0.0) (2026-01-05)
+
+### Features
+
+* **i18n:** add Czech (cs) locale ([#223](https://github.com/nuxt-content/studio/issues/223)) ([b803597](https://github.com/nuxt-content/studio/commit/b8035971e8d623e38d3f883e90324a36841cde0f))
+* **i18n:** add Korean (ko) locale ([#220](https://github.com/nuxt-content/studio/issues/220)) ([92fec9e](https://github.com/nuxt-content/studio/commit/92fec9e8cc1c03e5320008b41f71dd66021f007e))
+* **i18n:** add Russian (ru) locale ([#216](https://github.com/nuxt-content/studio/issues/216)) ([b97e352](https://github.com/nuxt-content/studio/commit/b97e3523d92e543cdf6df818119f0290a2ddad83))
+* **i18n:** define locale in`UApp` ([#225](https://github.com/nuxt-content/studio/issues/225)) ([a761b26](https://github.com/nuxt-content/studio/commit/a761b265c67403cac59d71492e8ba3ee236fe88b))
+
 ## [1.0.0-beta.3](https://github.com/nuxt-content/studio/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2025-12-24)
 
 ### Features

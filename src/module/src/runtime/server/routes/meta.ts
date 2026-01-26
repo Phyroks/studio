@@ -1,23 +1,31 @@
-import type { ComponentMeta } from 'vue-component-meta'
-import { eventHandler, useSession } from 'h3'
+import { eventHandler, useSession, getRequestProtocol } from 'h3'
 import { useRuntimeConfig, createError } from '#imports'
 // @ts-expect-error import does exist
 import components from '#nuxt-component-meta/nitro'
+import type { ComponentMeta as VueComponentMeta } from 'vue-component-meta'
 // @ts-expect-error import does exist
 import { highlight } from '#mdc-imports'
+import type { ComponentMeta } from 'nuxt-studio/app'
+import { filterComponents } from '../utils/meta'
 
-interface NuxtComponentMeta {
+export interface NuxtComponentMeta {
   pascalName: string
   filePath: string
-  meta: ComponentMeta
+  meta: VueComponentMeta
   global: boolean
 }
 
 export default eventHandler(async (event) => {
+  const config = useRuntimeConfig()
   if (!import.meta.dev) {
     const session = await useSession(event, {
       name: 'studio-session',
-      password: useRuntimeConfig(event).studio?.auth?.sessionSecret,
+      password: config.studio?.auth?.sessionSecret,
+      cookie: {
+        // Use secure cookies over HTTPS, required for locally testing purposes
+        secure: getRequestProtocol(event) === 'https',
+        path: '/',
+      },
     })
 
     if (!session?.data?.user) {
@@ -28,7 +36,7 @@ export default eventHandler(async (event) => {
     }
   }
 
-  const mappedComponents = (Object.values(components) as NuxtComponentMeta[])
+  const mappedComponents: ComponentMeta[] = (Object.values(components) as NuxtComponentMeta[])
     .map(({ pascalName, filePath, meta }) => {
       return {
         name: pascalName,
@@ -41,8 +49,14 @@ export default eventHandler(async (event) => {
       }
     })
 
+  const filteredComponents = filterComponents(
+    mappedComponents,
+    config.studio?.meta?.components,
+  )
+
   return {
+    markdownConfig: config.studio.markdown || {},
     highlightTheme: highlight?.theme || { default: 'github-light', dark: 'github-dark', light: 'github-light' },
-    components: mappedComponents,
+    components: filteredComponents,
   }
 })

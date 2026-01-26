@@ -230,6 +230,8 @@
         "copyToClipboard": "Kopier til utklippstavlen",
         "moveUp": "Flytt opp",
         "moveDown": "Flytt ned",
+        "insertBefore": "Sett inn før",
+        "insertAfter": "Sett inn etter",
         "delete": "Slett"
       },
       "element": {
@@ -237,8 +239,12 @@
         "editProps": "Rediger props",
         "delete": "Slett",
         "prop": "prop",
-        "props": "props",
-        "propsEditorComingSoon": "Props-editor kommer snart …"
+        "props": {
+          "label": "props",
+          "itemsCount": "{count} element | {count} elementer",
+          "fieldsCount": "{count} felt | {count} felter",
+          "edit": "Rediger {type}"
+        }
       },
       "slot": {
         "searchPlaceholder": "Søk etter eller opprett en slot …",
@@ -272,6 +278,29 @@
       "binding": {
         "variablePlaceholder": "Variabelnavn",
         "defaultValuePlaceholder": "Standardverdi"
+      },
+      "image": {
+        "source": "Bildekilde-URL",
+        "altText": "Alternativ tekst",
+        "title": "Bildetittel",
+        "width": "Bredde",
+        "height": "Høyde",
+        "noSource": "Ingen bildekilde",
+        "edit": "Rediger bilde",
+        "delete": "Slett bilde"
+      },
+      "video": {
+        "source": "Video source URL",
+        "poster": "Poster image URL",
+        "width": "Width",
+        "height": "Height",
+        "controls": "Show controls",
+        "autoplay": "Autoplay",
+        "loop": "Loop",
+        "muted": "Muted",
+        "noSource": "No video source",
+        "edit": "Edit video",
+        "delete": "Delete video"
       }
     },
     "mediaPicker": {

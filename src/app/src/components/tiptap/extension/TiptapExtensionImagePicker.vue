@@ -3,13 +3,12 @@ import type { NodeViewProps } from '@tiptap/vue-3'
 import { NodeViewWrapper } from '@tiptap/vue-3'
 import { ref } from 'vue'
 import type { TreeItem } from '../../../types'
-import ModalMediaPicker from '../../shared/ModalMediaPicker.vue'
 
 const props = defineProps<NodeViewProps>()
 
 const isOpen = ref(true)
 
-const handleImageSelect = (image: TreeItem) => {
+const handleImageSelect = (image: TreeItem | null) => {
   const pos = props.getPos()
 
   if (typeof pos === 'number') {
@@ -20,8 +19,10 @@ const handleImageSelect = (image: TreeItem) => {
       .insertContent({
         type: 'image',
         attrs: {
-          src: image.routePath,
-          alt: image.name,
+          props: {
+            src: image?.routePath || '',
+            alt: image?.name || '',
+          },
         },
       })
       .run()

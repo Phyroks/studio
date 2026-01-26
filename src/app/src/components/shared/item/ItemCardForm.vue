@@ -15,6 +15,7 @@ import { useStudio } from '../../../composables/useStudio'
 import { parseName, getFileExtension, CONTENT_EXTENSIONS, MEDIA_EXTENSIONS } from '../../../utils/file'
 import { upperFirst } from 'scule'
 import { useI18n } from 'vue-i18n'
+import slugify from 'slugify'
 
 const { context } = useStudio()
 const { t } = useI18n()
@@ -213,7 +214,7 @@ async function onSubmit() {
   isLoading.value = true
 
   let params: CreateFileParams | RenameFileParams | CreateFolderParams
-  const newFsPath = withoutLeadingSlash(joinURL(props.parentItem.fsPath, fullName.value))
+  const newFsPath = withoutLeadingSlash(joinURL(props.parentItem.fsPath, slugify(fullName.value))).toLowerCase()
 
   if (newFsPath === props.renamedItem?.fsPath) {
     isLoading.value = false

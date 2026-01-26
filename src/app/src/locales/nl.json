@@ -230,6 +230,8 @@
         "copyToClipboard": "Kopiëren naar klembord",
         "moveUp": "Omhoog",
         "moveDown": "Omlaag",
+        "insertBefore": "Invoegen voor",
+        "insertAfter": "Invoegen na",
         "delete": "Verwijderen"
       },
       "element": {
@@ -237,8 +239,12 @@
         "editProps": "Props bewerken",
         "delete": "Verwijderen",
         "prop": "prop",
-        "props": "props",
-        "propsEditorComingSoon": "Props-editor wordt binnenkort geïmplementeerd..."
+        "props": {
+          "label": "props",
+          "itemsCount": "{count} item | {count} items",
+          "fieldsCount": "{count} veld | {count} velden",
+          "edit": "{type} bewerken"
+        }
       },
       "slot": {
         "searchPlaceholder": "Zoek of maak een slot...",
@@ -272,6 +278,29 @@
       "binding": {
         "variablePlaceholder": "Variabelenaam",
         "defaultValuePlaceholder": "Standaardwaarde"
+      },
+      "image": {
+        "source": "Afbeelding bron-URL",
+        "altText": "Alternatieve tekst",
+        "title": "Afbeeldingstitel",
+        "width": "Breedte",
+        "height": "Hoogte",
+        "noSource": "Geen afbeeldingsbron",
+        "edit": "Afbeelding bewerken",
+        "delete": "Afbeelding verwijderen"
+      },
+      "video": {
+        "source": "Video source URL",
+        "poster": "Poster image URL",
+        "width": "Width",
+        "height": "Height",
+        "controls": "Show controls",
+        "autoplay": "Autoplay",
+        "loop": "Loop",
+        "muted": "Muted",
+        "noSource": "No video source",
+        "edit": "Edit video",
+        "delete": "Delete video"
       }
     },
     "mediaPicker": {

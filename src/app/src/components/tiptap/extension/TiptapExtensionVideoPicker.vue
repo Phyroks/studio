@@ -3,13 +3,12 @@ import type { NodeViewProps } from '@tiptap/vue-3'
 import { NodeViewWrapper } from '@tiptap/vue-3'
 import { ref } from 'vue'
 import type { TreeItem } from '../../../types'
-import ModalMediaPicker from '../../shared/ModalMediaPicker.vue'
 
 const props = defineProps<NodeViewProps>()
 
 const isOpen = ref(true)
 
-const handleVideoSelect = (video: TreeItem) => {
+const handleVideoSelect = (video: TreeItem | null) => {
   const pos = props.getPos()
 
   if (typeof pos === 'number') {
@@ -20,9 +19,8 @@ const handleVideoSelect = (video: TreeItem) => {
       .insertContent({
         type: 'video',
         attrs: {
-          src: video.routePath,
           props: {
-            src: video.routePath,
+            src: video?.routePath || '',
           },
         },
       })
